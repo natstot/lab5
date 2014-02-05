@@ -3,7 +3,15 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$('h3').click(nameClick);
 })
+
+
+function nameClick(e) {
+	e.preventDefault();
+	var oldName = $(this).text();
+	$(this).text(anagrammedName(oldName));
+}
 
 /*
  * Function that is called when the document is ready.
